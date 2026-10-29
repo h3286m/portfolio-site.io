@@ -1,0 +1,51 @@
+:root{--bg:#f4f5f7;--card:#fff;--ink:#14181f;--sub:#5b6472;--line:#d9dde3;--accent:#1d4ed8;--maxw:1120px}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1218;--card:#181c24;--ink:#eceff4;--sub:#9aa4b2;--line:#2a303b;--accent:#7aa2ff}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "Noto Sans JP",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.site-header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px max(20px,calc((100% - var(--maxw))/2));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{font-weight:900;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:18px;font-size:14px;font-weight:500}
+nav a{color:var(--sub);text-decoration:none}nav a:hover{color:var(--accent)}
+main>section{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.hero{padding-top:clamp(56px,10vw,120px);padding-bottom:56px}
+.hero-kicker{margin:0 0 12px;color:var(--accent);font-weight:700}
+h1{margin:0;font-size:clamp(32px,6.4vw,68px);line-height:1.25;font-weight:900;letter-spacing:-.01em}
+.hero-lead{max-width:36em;margin:24px 0 0;color:var(--sub)}
+.hero-facts{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.hero-facts li{background:var(--card);padding:16px 20px;font-size:14px;color:var(--sub)}
+.hero-facts b{display:block;font-size:22px;line-height:1.4;color:var(--ink)}
+.section-title{margin:0 0 8px;font-size:28px;font-weight:900}
+.section-note{margin:0 0 32px;color:var(--sub);font-size:14px}
+.work{background:var(--card);border:1px solid var(--line);border-radius:6px;margin-bottom:32px;padding:clamp(20px,4vw,40px)}
+.work-head{display:flex;align-items:center;gap:20px;padding-bottom:20px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.work-head img{flex:none;height:auto;max-height:64px;object-fit:contain}
+.work-head h3{margin:0;font-size:22px;line-height:1.4}
+.meta{margin:0;color:var(--sub);font-size:14px}
+.work-body{display:grid;gap:28px}
+.work-text p{margin:0 0 16px}
+.results{margin:0;padding-left:1.2em;font-size:15px}
+.results li{margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;align-content:start}
+figure{margin:0}
+figure img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:4px;background:#fff;cursor:zoom-in}
+figcaption{margin-top:6px;font-size:12px;line-height:1.5;color:var(--sub)}
+@media (min-width:900px){.work-body{grid-template-columns:minmax(280px,5fr) 7fr}.work-text{position:sticky;top:84px;align-self:start}}
+.plain{padding-top:48px;padding-bottom:48px}
+.projects{margin:24px 0 0}
+.projects div{padding:14px 0;border-top:1px solid var(--line)}
+.projects dt{font-weight:700}.projects dd{margin:4px 0 0;color:var(--sub);font-size:15px}
+.skills{display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:16px}
+.skills h3{margin:0 0 8px;font-size:17px}.skills ul{margin:0;padding-left:1.2em;color:var(--sub)}
+.btn{display:inline-block;padding:12px 24px;background:var(--accent);color:#fff;border-radius:4px;font-weight:700;text-decoration:none;word-break:break-all}
+@media (prefers-color-scheme:dark){.btn{color:#0f1218}}
+.site-footer{padding:32px 20px;text-align:center;color:var(--sub);font-size:13px}
+dialog{max-width:min(92vw,960px);max-height:92vh;padding:12px;border:0;border-radius:6px;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+dialog img{max-height:78vh;margin:0 auto;object-fit:contain}
+dialog p{margin:8px 0 0;text-align:center;font-size:14px}
+.close{position:absolute;top:4px;right:8px;border:0;background:none;color:inherit;font-size:28px;line-height:1;cursor:pointer}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
